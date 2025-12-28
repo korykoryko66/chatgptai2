@@ -70,6 +70,10 @@ actor 管理員
 @enduml
 ```
 
+![System Architecture Diagram](system%20architecture%20diagram.png)
+
+
+
 ---
 
 ### 1.3 功能性需求（Functional Requirements）
@@ -80,6 +84,9 @@ actor 管理員
 * **FR4**：使用者可歸還圖書並更新庫存狀態
 * **FR5**：管理員可管理書籍與使用者資料
 
+![Class Diagram](class%20diagram.png)
+
+
 ---
 
 ### 1.4 非功能性需求（Non-Functional Requirements）
@@ -89,12 +96,18 @@ actor 管理員
 * 可用性需求：操作介面簡單直覺
 * 可靠性需求：借閱資料不可遺失
 
+![Borrow System Architecture Diagram](borrow%20system%20architecture%20diagram.png)
+
+
 ---
 
 ### 1.5 介面需求
 
 * 圖形化使用者介面（GUI）
 * 提供登入畫面、主選單、圖書查詢頁、管理頁面
+
+![Borrow Flow Activity Diagram](borrow%20flow%20activity%20diagram.png)
+
 
 ---
 
@@ -117,6 +130,9 @@ actor 管理員
 管理員 --> (管理使用者帳號)
 @enduml
 ```
+
+![Admin Use Case Diagram](admin%20use%20case%20diagram.png)
+
 
 ---
 
