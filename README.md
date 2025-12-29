@@ -38,17 +38,8 @@
 * 歸還圖書
 * 查詢個人借閱紀錄
 
-```plantuml
-@startuml
-left to right direction
-actor 使用者
+![1](1.png)
 
-使用者 --> (查詢圖書)
-使用者 --> (借閱圖書)
-使用者 --> (歸還圖書)
-使用者 --> (查詢個人借閱紀錄)
-@enduml
-```
 
 #### （二）管理員（Admin）
 
@@ -57,18 +48,8 @@ actor 使用者
 * 借閱紀錄管理
 * 系統維護
 
-```plantuml
-@startuml
-left to right direction
-actor 管理員
+![2](2.png)
 
-管理員 --> (新增圖書)
-管理員 --> (修改圖書)
-管理員 --> (刪除圖書)
-管理員 --> (管理使用者帳號)
-管理員 --> (查詢借閱紀錄)
-@enduml
-```
 
 ![System Architecture Diagram](system%20architecture%20diagram.png)
 
@@ -113,23 +94,8 @@ actor 管理員
 
 ### 1.6 UML：使用案例圖（Use Case Diagram）
 
-```plantuml
-@startuml
-left to right direction
-actor 使用者
-actor 管理員
+![3](3.png)
 
-使用者 --> (查詢圖書)
-使用者 --> (借閱圖書)
-使用者 --> (歸還圖書)
-使用者 --> (查詢個人借閱紀錄)
-
-管理員 --> (新增圖書)
-管理員 --> (修改圖書)
-管理員 --> (刪除圖書)
-管理員 --> (管理使用者帳號)
-@enduml
-```
 
 ![Admin Use Case Diagram](admin%20use%20case%20diagram.png)
 
@@ -159,43 +125,16 @@ actor 管理員
 
 ### 2.3 模組關係（Component Diagram）
 
-```plantuml
-@startuml
-package UI
-package Service
-package DAO
+![4](4.png)
 
-UI --> Service
-Service --> DAO
-@enduml
-```
+
 
 ---
 
 ### 2.4 類別設計（Class Diagram）
 
-```plantuml
-@startuml
-class User {
-  userId
-  name
-}
+![5](5.png)
 
-class Book {
-  bookId
-  title
-  status
-}
-
-class BorrowRecord {
-  borrowDate
-  returnDate
-}
-
-User --> BorrowRecord
-Book --> BorrowRecord
-@enduml
-```
 
 ---
 
@@ -203,19 +142,8 @@ Book --> BorrowRecord
 
 ### 3.1 借閱流程（Sequence Diagram）
 
-```plantuml
-@startuml
-actor 使用者
-participant 系統
-participant 資料庫
+![6](6.png)
 
-使用者 -> 系統 : 借閱圖書
-系統 -> 資料庫 : 檢查書籍狀態
-資料庫 -> 系統 : 可借
-系統 -> 資料庫 : 建立借閱紀錄
-系統 -> 使用者 : 借閱成功
-@enduml
-```
 
 ---
 
@@ -231,19 +159,8 @@ participant 資料庫
 
 ### 3.3 UML：活動圖（Activity Diagram）
 
-```plantuml
-@startuml
-start
-:選擇圖書;
-if (是否可借?) then (是)
-  :建立借閱紀錄;
-  :更新書籍狀態;
-else (否)
-  :顯示不可借訊息;
-endif
-stop
-@enduml
-```
+![7](7.png)
+
 
 ---
 
